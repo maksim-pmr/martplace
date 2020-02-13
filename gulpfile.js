@@ -64,4 +64,3 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', gulp.parallel('style', 'script', 'sass', 'watch', 'browser-sync'))
-
