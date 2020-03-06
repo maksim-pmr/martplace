@@ -2527,14 +2527,20 @@ background-color: #ea4c89;
 
 .single__product-top,
 .favorites__product-top,
-.login__top{
+.login__top,
+.author__top,
+.pricing__top,
+.terms__top{
     background-color: rgba(21,26,32,0.9);
     background-image: linear-gradient(to left, #0d3ef2 12%, #7221a0 87%);
     opacity: 0.9;
 }
 .single__product-top--wrapper,
 .favorites__product-top--wrapper,
-.login__top--wrapper{
+.login__top--wrapper,
+.author__top--wrapper,
+.pricing__top--wrapper,
+.terms__top--wrapper{
     height: 180px;
     & .breadcrumbs{
         padding-top: 50px;
@@ -2543,7 +2549,9 @@ background-color: #ea4c89;
 }
 .single__product-top--info,
 .favorites__product-top--info,
-.login__top--info{
+.login__top--info,
+.pricing__top--info,
+.terms__top--info{
     font-size: 30px;
     font-weight: 500;
     line-height: 30px;
@@ -3128,6 +3136,222 @@ background-color: #ea4c89;
 }
 
 // ------------LOGIN PAGE END------------
+
+// ------------AUTHOR PAGE START------------
+
+.author__top{
+    height: 280px;
+    .breadcrumbs__inner{
+        text-align: center;
+    }
+}
+.author__top-text{
+    padding-top: 70px;
+    line-height: 50px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    color: #f3f3f8;
+    max-width: 410px;
+    span{
+        font-weight: 500;
+    }
+}
+.author__item{
+    padding: 100px 0;
+    background-color: #fff;
+    &:nth-child(2){
+        background-color: #eff1f5;
+        & .author__item-wrapper{
+            flex-direction: row-reverse;
+        }
+    }
+    & + .author__item{
+        .author__item-btn{
+            background-color: #fff;
+            color: $blue;
+        }
+    }
+}
+.author__item-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.author__item-content{
+    max-width: 460px;
+}
+.author__item-title{
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 35px;
+}
+.author__item-text{
+    color: $text;
+    line-height: 30px;
+    padding-bottom: 30px;
+}
+.author__item-btn{
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+    height: 50px;
+    line-height: 50px;
+    padding: 0px 35px;
+    background-color: $blue;
+    color: #fff;
+    border-radius: 35px;
+}
+// ------------AUTHOR PAGE END------------
+
+// ------------PRICING PAGE START------------
+
+
+.pricing{
+    background-color: #eff1f5;
+    padding: 110px 0;
+}
+.pricing__title{
+    text-align: center;
+    font-size: 36px;
+    line-height: 36px;
+    color: #000;
+    padding-bottom: 25px;
+    span{
+        color: $blue;
+    }
+}
+.pricing__text{
+    text-align: center;
+    color: $text;
+    line-height: 30px;
+    max-width: 680px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.pricing__items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pricing__item{
+    max-width: 360px;
+    transition: all .3s;
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    background-color: #fff;
+    border-top: 3px solid #ff6a6c;
+    padding: 30px;
+    &:nth-child(2){
+        border-top: 3px solid $blue;
+        & .pricing__item-btn{
+            background-color: $blue;
+        }
+    }
+    &:nth-child(3){
+        border-top: 3px solid #feb71d;
+        & .pricing__item-btn{
+            background-color: #feb71d;
+        }
+    }
+    &:hover{
+        transform: scale(1.03);
+    }
+}
+.pricing__item-title{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #ececec;
+}
+.pricing__item-price{
+    text-align: center;
+    color: $text;
+    position: relative;
+    padding-left: 11px;
+    margin-top: 22px;
+    margin-bottom: 35px;
+    span{
+        font-size: 36px;
+        color: #000;
+        line-height: 36px;
+        &.value{
+            position: absolute;
+            top: 2px;
+            left: 0;
+            right: 144px;
+            font-size: 18px;
+            line-height: 20px;
+        }
+    }
+}
+.pricing__item-list{
+    padding: 10px 0px 35px;
+    li{
+        display: block;
+        line-height: 36px;
+        color: $text;
+        padding-left: 23px;
+        position: relative;
+        & span{
+            font-weight: 500;
+            color: #000;
+        }
+        &::before{
+            content: '';
+            background-image: url(../images/icons/circle-pricing.png);
+            background-repeat: no-repeat;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            left: 0;
+            transform: translateY(-53%);
+            top: 50%;
+        }
+    }
+}
+.pricing__item-btn{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0px 10px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: #ff6a6c;
+    border-radius: 4px;
+}
+
+// ------------PRICING PAGE END------------
+
+// ------------TERMS PAGE START------------
+
+.terms{
+    padding: 60px 0px 120px;
+    background-color: #eff1f5;
+}
+.terms__inner{
+    background-color: #fff;
+    padding: 40px 0px;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+}
+.terms__item-title{
+    padding: 0px 30px 25px;
+    font-size: 24px;
+    border-bottom: 1px solid #ececec;
+}
+.terms__item-text{
+    padding: 30px 30px 50px;
+    line-height: 30px;
+    color: $text;
+}
+
+// ------------TERMS PAGE END------------
+
+
+
 
 
 
