@@ -18,8 +18,8 @@ $(function () {
     });
 
 
-    $('select,input[type=checkbox]').styler();
 
+    $('select,input[type=checkbox]').styler();
 
     $(".product__slider-items").slick({
         prevArrow: '<button class="lnr lnr-chevron-left"></button>',
@@ -187,6 +187,16 @@ $(function () {
     });
 
 
+
+    new WOW().init();
+
+
+    $("#ff").on("click", "a", function (event) {
+        event.preventDefault();
+        var id = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({ scrollTop: top }, 2500);
+    });
 
 
 

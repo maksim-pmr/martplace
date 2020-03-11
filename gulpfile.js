@@ -6,6 +6,7 @@ let gulp = require('gulp'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
     cssmin = require('gulp-cssmin');
+var tooltip = require('tooltip')
 
 gulp.task('sass', function () {
     return gulp.src('app/scss/**/*.scss')
@@ -27,11 +28,14 @@ gulp.task('style', function () {
         'node_modules/jquery-form-styler/dist/jquery.formstyler.css',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.theme.css',
         'node_modules/ion-rangeslider/css/ion.rangeSlider.css',
+        'node_modules/animate.css/animate.css',
     ])
         .pipe(concat('libs.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest('app/css'))
 });
+
+
 
 gulp.task('script', function () {
     return gulp.src([
@@ -41,6 +45,8 @@ gulp.task('script', function () {
         'node_modules/mixitup/dist/mixitup.js',
         'node_modules/jquery-form-styler/dist/jquery.formstyler.js',
         'node_modules/ion-rangeslider/js/ion.rangeSlider.js',
+        'node_modules/tooltip/dist/Tooltip.js',
+        'node_modules/wow.js/dist/wow.js',
     ])
         .pipe(concat('libs.min.js'))
         .pipe(uglify())
